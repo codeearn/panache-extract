@@ -3,7 +3,7 @@ a maf taf conversion for the panache for the genome visualization. given a align
 
 Gaurav Sablok \
 Academic Staff Member \
-Bioinformatics \ 
+Bioinformatics \
 Institute for Biochemistry and Biology \
 University of Potsdam \
 Potsdam,Germany
