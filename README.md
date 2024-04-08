@@ -8,9 +8,10 @@ a maf taf conversion for the panache for the genome visualization. given a align
   getspecific("simDog.chr6","/home/gaurav/Desktop/maf_taf_panache/sample.taf",
                                     "/home/gaurav/Desktop/maf_taf_panache/sample.txt"
   ```
-- extract specific sequences from the alignments. **to do evening**
-- extract the position of those snps from the alignments. **to do evening**
-- search according to the sequence ids or according to the column values.  **to do evening**
+- extract specific sequences from the alignments. **evening release final code check**
+- extract the position of those snps from the alignments. **evening release final code check**
+- search according to the sequence ids or according to the column values.  **evening release final code check**
+- a ruby on rails plus a streamlit application for the visualization of the extracted snps breakpoints.
 
 Gaurav Sablok \
 Academic Staff Member \
