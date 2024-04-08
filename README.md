@@ -5,7 +5,8 @@ a maf taf conversion for the panache for the genome visualization. given a align
 
 - extracts specific sequences from the pangenome graph
   ```
-  getspecific("simDog.chr6","/home/gaurav/Desktop/maf_taf_panache/sample.taf", "/home/gaurav/Desktop/maf_taf_panache/sample.txt"
+  getspecific("simDog.chr6","/home/gaurav/Desktop/maf_taf_panache/sample.taf",
+                                    "/home/gaurav/Desktop/maf_taf_panache/sample.txt"
   ```
 - extract specific sequences from the alignments.
 - extract the position of those snps from the alignments.
