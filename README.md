@@ -3,7 +3,10 @@ a maf taf conversion for the panache for the genome visualization. given a align
 
 - Finishing this complete class this evening, so more code to put, doing the final checks on the other ones.
 
-- extracts specific sequences from the pangenome graph 
+- extracts specific sequences from the pangenome graph
+  ```
+  getspecific("simDog.chr6","/home/gaurav/Desktop/maf_taf_panache/sample.taf", "/home/gaurav/Desktop/maf_taf_panache/sample.txt"
+  ```
 - extract specific sequences from the alignments.
 - extract the position of those snps from the alignments.
 - search according to the sequence ids or according to the column values. 
