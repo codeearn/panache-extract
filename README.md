@@ -6,7 +6,16 @@ a maf taf conversion for the panache for the genome visualization. given a align
   getspecific("simDog.chr6","/home/gaurav/Desktop/maf_taf_panache/sample.taf",
                                     "/home/gaurav/Desktop/maf_taf_panache/sample.txt"
   ```
-- extract specific sequences from the alignments. **evening release final code check**
+- extract specific sequences from the alignments associated with the specific deletions
+  ```
+  # will only give the sequences of those which have deletions in the graphs. 
+   getspecific("simDog.chr6", "/home/gaurav/Desktop/maf_taf_panache/sample.taf",
+                        "/home/gaurav/Desktop/maf_taf_panache/sample.txt", del = "None")
+        [["simDog.chr6", "CCCGTCAGTGT"], ["simDog.chr6", "TT-TTCCG"]]
+   getspecific("simDog.chr6", "/home/gaurav/Desktop/maf_taf_panache/sample.taf",
+                       "/home/gaurav/Desktop/maf_taf_panache/sample.txt", del != "None")
+          [["simDog.chr6", "TT-TTCCG"]]
+  
 - extract the position of those snps from the alignments. **evening release final code check**
 - search according to the sequence ids or according to the column values.  **evening release final code check**
 - a ruby on rails plus a streamlit application for the visualization of the extracted snps breakpoints.
