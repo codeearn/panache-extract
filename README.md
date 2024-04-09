@@ -1,5 +1,5 @@
 # maf-taf-panache
-a maf taf conversion for the panache for the genome visualization. given a alignment in the maf and the taf format, you can extract the specific sequences for the snps with the pangenomes using specific ids and also the sequences as strings. it will also tell which snps variation is present so that it can be poulated on panache.
+a maf taf conversion for the panache for the genome visualization. given a alignment in the maf and the taf format, you can extract the specific sequences for the snps with the pangenomes using specific ids and also the sequences as strings. it will also tell which snps variation is present so that it can be poulated on panache.This is now available as a ruby gem [panacheextract](https://rubygems.org/gems/panacheextract) 
 
 - extracts specific sequences from the pangenome graph
   ```
@@ -16,9 +16,9 @@ a maf taf conversion for the panache for the genome visualization. given a align
                        "/home/gaurav/Desktop/maf_taf_panache/sample.txt", del != "None")
           [["simDog.chr6", "TT-TTCCG"]]
   
-- extract the position of those snps from the alignments. **evening release final code check**
-- search according to the sequence ids or according to the column values.  **evening release final code check**
-- a ruby on rails plus a streamlit application for the visualization of the extracted snps breakpoints.
+- extract the position of those snps from the alignments. **adding this to the gem**
+- search according to the sequence ids or according to the column values.  **adding this to the gem**
+- a ruby on rails plus a streamlit application for the visualization of the extracted snps breakpoints. **adding the ruby bindings to the djnago panache application**
 
 Gaurav Sablok \
 Academic Staff Member \
