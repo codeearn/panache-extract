@@ -16,7 +16,12 @@ a maf taf conversion for the panache for the genome visualization. given a align
                        "/home/gaurav/Desktop/maf_taf_panache/sample.txt", del != "None")
           [["simDog.chr6", "TT-TTCCG"]]
   
-- extract the position of those snps from the alignments. **adding this to the gem**
+- extract the position of deletion snps from the alignments. will only report the coordinates of those ids if they have deletions.
+  ```
+  delcoordinates("simDog.chr6", "/home/gaurav/Desktop/maf_taf_panache/sample.taf",
+                                         "/home/gaurav/Desktop/maf_taf_panache/sample.txt")
+  ```
+  
 - search according to the sequence ids or according to the column values.  **adding this to the gem**
 - a ruby on rails plus a streamlit application for the visualization of the extracted snps breakpoints. **adding the ruby bindings to the djnago panache application**
 
