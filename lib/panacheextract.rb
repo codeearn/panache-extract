@@ -90,3 +90,29 @@ def getspecific(ids, inputalignment, outalignmentfile, del = "None")
         return(delselect)
     end
 end
+
+def delcoordinates(ids, inputalignment, outalignment)
+        id = ids.to_s
+        readiter = File.open(inputalignment, "r").readlines
+        writefile = File.new(outalignment, "w")
+        for i in 0..readiter.length
+            writefile.write(readiter[i]) if readiter[i].to_s.strip.split[0] == "s"
+        end
+        writefile.close
+        readopen = File.open(outalignment, "r").readlines
+        ids = []
+        sequences = []
+        ids_start = []
+        ids_end = []
+        for i in 0..readopen.length 
+            readopen.each { | iter | ids.push(iter.to_s.strip.split[1]) if iter.to_s.strip.split[1] == id }
+            readopen.each { | iter | sequences.push(iter.to_s.strip.split[6]) if iter.to_s.strip.split[1] == id }
+            readopen.each { | iter | ids_start.push(iter.to_s.strip.split[2]) if iter.to_s.strip.split[1] == id }
+            readopen.each { | iter | ids_end.push(iter.to_s.strip.split[5]) if iter.to_s.strip.split[1] == id }
+        end
+        delselected = []
+        for i in 0..sequences.length 
+            delselected.push([ids_start[i], ids_end[i]]) if sequences[i].to_s.count("-") >=1
+        end
+        return(delselected)
+end
