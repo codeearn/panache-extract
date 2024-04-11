@@ -22,7 +22,6 @@ s       simHuman.chr6   446338  8       +       601863  TTCTTCCG
 s       simMouse.chr6   460762  8       +       636262  TTTTACCG
 s       simRat.chr6     470355  8       +       647215  TTTTACCG
 ```
-
 - extracts specific sequences from the pangenome graph
   ```
   getspecific("simDog.chr6","/home/gaurav/Desktop/maf_taf_panache/sample.taf",
@@ -37,7 +36,7 @@ s       simRat.chr6     470355  8       +       647215  TTTTACCG
    getspecific("simDog.chr6", "/home/gaurav/Desktop/maf_taf_panache/sample.taf",
                        "/home/gaurav/Desktop/maf_taf_panache/sample.txt", del != "None")
           [["simDog.chr6", "TT-TTCCG"]]
-  
+
 - extract the position of deletion snps from the alignments. will only report the coordinates of those ids if they have deletions.
   ```
   delcoordinates("simDog.chr6", "/home/gaurav/Desktop/maf_taf_panache/sample.taf",
