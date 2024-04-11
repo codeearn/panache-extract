@@ -114,5 +114,67 @@ def delcoordinates(ids, inputalignment, outalignment)
         for i in 0..sequences.length 
             delselected.push([ids_start[i], ids_end[i]]) if sequences[i].to_s.count("-") >=1
         end
+ 
+   def getAll(ids, inputalignment, outalignment, del, writefilter)
+   if del == "false" and writefilter
+      readiter = File.open(inputalignment, "r").readlines
+        writefile = File.new(outalignmentfile, "w")
+        for i in 0..readiter.length
+            writefile.write(readiter[i]) if readiter[i].to_s.strip.split[0] == "s"
+        end
+        writefile.close
+      readopen = File.open(outalignmentfile, "r").readlines
+      ids = []
+      sequences = []
+      idsstart = []
+      idsend = []
+      for i in 0..readopen.length
+         ids.push(readopen[i].to_s.strip.split[2]) if readopen[i].to_s.strip.split[2] == ids
+      end 
+      for i in 0..readopen.length
+         sequences.push(readopen[i].to_s.strip.split[6]) if readopen[i].to_s.strip.split[2] == ids 
+      end 
+      for i in 0..readopen.length 
+         idstart.push(readopen[i].to_s.strip.split[2]) if readopen[i].to_s.strip.split[2] == ids 
+      end 
+      for i in 0..readopen.length 
+         idsend.push(readopen[i].to_s.strip.split([5])) if readopen[i].to_s.strip.split[2] == ids 
+      end
+      return(ids, sequnces, idstart, idsend)
+   end
+   if del == "true" and writefilter
+      readiter = File.open(inputalignment, "r").readlines
+        writefile = File.new(outalignmentfile, "w")
+        for i in 0..readiter.length
+            writefile.write(readiter[i]) if readiter[i].to_s.strip.split[0] == "s"
+        end
+        writefile.close
+      readopen = File.open(outalignmentfile, "r").readlines
+      ids = []
+      sequences = []
+      idsstart = []
+      idsend = []
+      for i in 0..readopen.length
+         ids.push(readopen[i].to_s.strip.split[1]) if readopen[i].to_s.strip.split[1] == ids
+      end 
+      for i in 0..readopen.length
+         sequences.push(readopen[i].to_s.strip.split[6]) if readopen[i].to_s.strip.split[1] == ids 
+      end 
+      for i in 0..readopen.length 
+         idstart.push(readopen[i].to_s.strip.split[2]) if readopen[i].to_s.strip.split[1] == ids 
+      end 
+      for i in 0..readopen.length 
+         idsend.push(readopen[i].to_s.strip.split([5])) if readopen[i].to_s.strip.split[1] == ids 
+      end
+      writefile = File.new(writefilter, "w")
+      selected = []
+      for i in 0..readopen.length 
+        selected.push(readopen[i]) if readfile[i].to_s.strip.split[1] == ids and readfile[i].to_s.strip.split[6].count("-") >= 1
+      end 
+      for i in 0..selected.length 
+        writefile.write(selected[i])
+      writefile.closed
+    end
+end
         return(delselected)
 end
