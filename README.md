@@ -21,10 +21,12 @@ a maf conversion for the panache for the genome visualization. given a alignment
   delcoordinates("simDog.chr6", "/home/gaurav/Desktop/maf_taf_panache/sample.taf",
                                          "/home/gaurav/Desktop/maf_taf_panache/sample.txt")
   ```
+- search according to the sequence ids or according to the column values.
+  ```
+  # usage as above, added support for writing the output files to the disk for every function.
+    getAll(ids, inputalignment, outalignment, del, writefilter)
+  ```
   
-- search according to the sequence ids or according to the column values.  **adding this to the gem**
-- a ruby on rails plus a streamlit application for the visualization of the extracted snps breakpoints. **adding the ruby bindings to the djnago panache application**
-
 Gaurav Sablok \
 Academic Staff Member \
 Bioinformatics \
