@@ -5,6 +5,23 @@
 - added support for the output file write to each and every function of the gem
 - This is now available as a ruby gem [panacheextract](https://rubygems.org/gems/panacheextract)
 - ruby bindings to the django is also available.
+- example MAF(602 bytes) [example MAF format](https://github.com/ComparativeGenomicsToolkit/taffy)
+```
+##maf version=1 scoring=N/A
+
+a
+s       simDog.chr6     437451  11      +       593897  CCCGTCAGTGT
+s       simHuman.chr6   446327  11      +       601863  TCCGCCAAGGT
+s       simMouse.chr6   460751  11      +       636262  TTCATCAGAGT
+s       simRat.chr6     470339  11      +       647215  TTCATTAGGGT
+
+a
+s       simCow.chr6     445326  8       +       602619  TTTTCCCA
+s       simDog.chr6     437462  8       +       593897  TT-TTCCG
+s       simHuman.chr6   446338  8       +       601863  TTCTTCCG
+s       simMouse.chr6   460762  8       +       636262  TTTTACCG
+s       simRat.chr6     470355  8       +       647215  TTTTACCG
+```
 
 - extracts specific sequences from the pangenome graph
   ```
