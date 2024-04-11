@@ -1,5 +1,10 @@
 # panache-extract
-a maf conversion for the panache for the genome visualization. given a alignment in the maf and the taf format, you can extract the specific sequences for the snps with the pangenomes using specific ids and also the sequences as strings. it will also tell which snps variation is present so that it can be poulated on panache.This is now available as a ruby gem [panacheextract](https://rubygems.org/gems/panacheextract) 
+- a maf conversion for the panache for the genome visualization. 
+- given a alignment in the maf and the taf format, you can extract the specific sequences for the snps with the pangenomes using specific ids and also the sequences as strings.
+- it will also tell which snps variation is present so that it can be poulated on panache.
+- added support for the output file write to each and every function of the gem
+- This is now available as a ruby gem [panacheextract](https://rubygems.org/gems/panacheextract)
+- ruby bindings to the django is also available.
 
 - extracts specific sequences from the pangenome graph
   ```
