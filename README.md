@@ -48,7 +48,7 @@ s       simRat.chr6     470355  8       +       647215  TTTTACCG
     getAll(ids, inputalignment, outalignment, del, writefilter)
   ```
   
-Gaurav Sablok \
+Gaurav \
 Academic Staff Member \
 Bioinformatics \
 Institute for Biochemistry and Biology \
